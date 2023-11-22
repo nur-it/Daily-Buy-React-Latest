@@ -1,1 +1,1 @@
-# Daily buy shopping cart
+# Daily buy React Application With Nur-IT
