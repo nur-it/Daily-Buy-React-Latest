@@ -6,7 +6,7 @@ import BreakfastDairy from '../../assets/icon/foodCategoryPrimaryIcon (4).png'
 import FrozenFoods from '../../assets/icon/foodCategoryPrimaryIcon (5).png'
 const FoodCategoryV2 = () => {
     return (
-        <div className=' flex flex-wrap justify-center gap-8 md:gap-12 lg:gap-24 mt-[65px]'>
+        <div className='lg:container flex flex-wrap justify-center lg:justify-between gap-8 md:gap-12 lg:gap-24 mt-[65px]'>
             <div className=' text-center flex flex-col items-center justify-center'>
                 <div className=' w-[80px] lg:w-[130px] h-[80px] lg:h-[130px] flex items-center justify-center rounded-full bg-primary-50'>
                     <img className='w-[50px] lg:w-[75px]' src={fruitsAndVegetable} alt=""/>
