@@ -12,7 +12,7 @@ import ProductCard from "../components/shared/ProductCard";
 import bigImg from "../assets/products/product (1).png";
 import axios from "axios";
 import ReactStars from "react-stars";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../redux/feature/cartSlice";
 import { Helmet } from "react-helmet";
 import Reviews from "../components/screen/Review/Reviews";
@@ -21,6 +21,7 @@ import ThemeSuspense from "../components/theme/ThemeSuspense";
 const ProductDetails = () => {
   const [click, setClick] = useState(false);
   const [productData, setProductData] = useState([]);
+  const { cartItems } = useSelector((state) => state.cart);
 
   const { itemId } = useParams();
   const dispatch = useDispatch();
@@ -124,7 +125,7 @@ const ProductDetails = () => {
                 </div>
 
                 <div className="block lg:hidden">
-                  <Quantity />
+                  <Quantity item={itemId} />
                 </div>
               </div>
 
@@ -160,12 +161,12 @@ const ProductDetails = () => {
               ==============================*/}
                 <div className=" mt-8 lg:mt-6 flex flex-col lg:flex-row lg:items-center gap-[32px] order-1 lg:order-2">
                   <div className="flex items-center justify-between md:justify-start gap-[32px]">
-                    <div className="hidden lg:block">
-                      <Quantity />
-                    </div>
-                    <div>
-                      {" "}
-                      <Link to="/cart">
+                    {cartItems.length ? (
+                      <div className="hidden lg:block">
+                        <Quantity item={itemId} productInfo={productInfo} />
+                      </div>
+                    ) : (
+                      <div>
                         <button
                           disabled={!stock}
                           onClick={() => handleAddToCart(productInfo)}
@@ -173,10 +174,10 @@ const ProductDetails = () => {
                         >
                           Add to cart
                         </button>
-                      </Link>
-                    </div>{" "}
+                      </div>
+                    )}
                     <div>
-                      <Link to="/checkout">
+                      {cartItems.length ? (
                         <button
                           disabled={!stock}
                           onClick={() => handleAddToCart(productInfo)}
@@ -184,7 +185,17 @@ const ProductDetails = () => {
                         >
                           Buy Now
                         </button>
-                      </Link>
+                      ) : (
+                        <Link to="/checkout">
+                          <button
+                            disabled={!stock}
+                            onClick={() => handleAddToCart(productInfo)}
+                            className="text-primary-600 hover:text-primary-800 bg-white hover:bg-primary-50 border border-primary-600 hover:border-primary-800 duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px] disabled:border-primary-600/50 disabled:text-primary-600/50"
+                          >
+                            Buy Now
+                          </button>
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
