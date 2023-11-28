@@ -32,7 +32,7 @@ const NavItems = () => {
                         </svg>
                     </button>
                     <ul
-                        className="absolute left-0 mt-0 w-48 bg-white border border-gray-300 rounded-md shadow-lg hidden group-hover:block">
+                        className="absolute left-0 mt-0 w-48 bg-white border border-gray-300 rounded-md shadow-lg hidden group-hover:block !z-10">
                          
                           <li
                             className="block px-4 py-2">

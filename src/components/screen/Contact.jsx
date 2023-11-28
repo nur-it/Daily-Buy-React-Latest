@@ -92,7 +92,7 @@ const Contact = () => {
                 placeholder="Message"
               ></textarea>
             </div>
-            <FullWidthButton title="Submit Now" />
+            <FullWidthButton title="Send Message" />
           </form>
         </div>
       </div>

@@ -25,7 +25,7 @@ const Sidebar = ({ visible, handleCloseSidebar }) => {
     >
       <div className="relative w-2/4">
         <div className="bg-white w-full h-screen p-[12px] md:p-6">
-          <div className=" w-full flex justify-between">
+          <div className=" w-full flex justify-between pt-8">
             <div className="flex items-center gap-6 md:gap-8">
               <button className="" onClick={() => setShowModal(true)}>
                 <RiUser3Line className="text-[20px] hover:text-black duration-300" />

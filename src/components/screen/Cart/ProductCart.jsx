@@ -22,7 +22,7 @@ const ProductCart = () => {
   const shipping = 3;
   return (
     <div>
-      <div className="container ">
+      <div className="container text-center">
         <h2 className=" text-[18px] md:text-[25px] lg:text-[48px] font-semibold mt-[100px] lg:mt-[40px] mb-[15px] lg:mb-[32px]">Your Cart</h2>
         {cartItems.length && (
           <div>
