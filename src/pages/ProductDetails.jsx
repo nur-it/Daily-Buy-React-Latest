@@ -161,21 +161,20 @@ const ProductDetails = () => {
               ==============================*/}
                 <div className=" mt-8 lg:mt-6 flex flex-col lg:flex-row lg:items-center gap-[32px] order-1 lg:order-2">
                   <div className="flex items-center justify-between md:justify-start gap-[32px]">
-                    {cartItems.length ? (
-                      <div className="hidden lg:block">
-                        <Quantity item={itemId} productInfo={productInfo} />
-                      </div>
-                    ) : (
-                      <div>
-                        <button
-                          disabled={!stock}
-                          onClick={() => handleAddToCart(productInfo)}
-                          className="bg-primary-600 hover:bg-primary-500 text-white border duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px] disabled:bg-primary-600/50"
-                        >
-                          Add to cart
-                        </button>
-                      </div>
-                    )}
+                    <div className="hidden lg:block">
+                      <Quantity item={itemId} productInfo={productInfo} />
+                    </div>
+
+                    <div>
+                      <button
+                        disabled={!stock || cartItems.length}
+                        onClick={() => handleAddToCart(productInfo)}
+                        className="bg-primary-600 hover:bg-primary-500 text-white border duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px] disabled:bg-primary-600/50"
+                      >
+                        {cartItems.length ? "Added Already" : "Add to cart"}
+                      </button>
+                    </div>
+
                     <div>
                       {cartItems.length ? (
                         <button
