@@ -9,7 +9,7 @@ import { ImWarning } from "react-icons/im";
 import Quantity from "../components/shared/Quantity";
 import AddReview from "../components/screen/Review/AddReview";
 import ProductCard from "../components/shared/ProductCard";
-import bigImg from "../assets/products/product (1).png";
+
 import axios from "axios";
 import ReactStars from "react-stars";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,6 +30,7 @@ const ProductDetails = () => {
   }, []);
 
   const productInfo = productData.find((product) => product._id === parseInt(itemId));
+  const bigImg = productInfo ? productInfo.main_img_url : "https://i.ibb.co/2SVpc63/product-2.png";
   const [activeImg, setActiveImg] = useState(bigImg);
   const [wishlist, setWishlist] = useState(false);
   const [active, setActive] = useState("desc");
@@ -179,7 +180,7 @@ const ProductDetails = () => {
                     </div>
 
                     <div>
-                      {cartItem?.cartQuantity ? (
+                      {cartItem?.cartQuantity === 0 ? (
                         <button
                           disabled={!stock}
                           onClick={() => handleAddToCart(productInfo)}
@@ -191,7 +192,6 @@ const ProductDetails = () => {
                         <Link to="/checkout">
                           <button
                             disabled={!stock}
-                            onClick={() => handleAddToCart(productInfo)}
                             className="text-primary-600 hover:text-primary-800 bg-white hover:bg-primary-50 border border-primary-600 hover:border-primary-800 duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px] disabled:border-primary-600/50 disabled:text-primary-600/50"
                           >
                             Buy Now
