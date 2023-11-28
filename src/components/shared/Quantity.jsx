@@ -31,7 +31,7 @@ const Quantity = ({ item, productInfo }) => {
             &minus;
           </button>
 
-          <span className="px-6 font-semibold">{cartItem ? cartItem.cartQuantity : 0}</span>
+          <span className="px-6 font-semibold">{cartItem ? cartItem?.cartQuantity : 0}</span>
 
           <button
             onClick={() => handleIncreaseCart(productInfo)}
