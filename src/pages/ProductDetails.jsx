@@ -34,6 +34,9 @@ const ProductDetails = () => {
   const [wishlist, setWishlist] = useState(false);
   const [active, setActive] = useState("desc");
 
+  const cartItem = cartItems.find((cart) => cart._id !== itemId);
+  // console.log(cartItem);
+
   const handleAddToCart = (cartItem) => {
     dispatch(addToCart(cartItem));
   };
@@ -167,16 +170,16 @@ const ProductDetails = () => {
 
                     <div>
                       <button
-                        disabled={!stock || cartItems.length}
+                        disabled={!stock || cartItem?.cartQuantity > 0}
                         onClick={() => handleAddToCart(productInfo)}
                         className="bg-primary-600 hover:bg-primary-500 text-white border duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px] disabled:bg-primary-600/50"
                       >
-                        {cartItems.length ? "Added Already" : "Add to cart"}
+                        {cartItem?.cartQuantity > 0 ? "Added Already" : "Add to cart"}
                       </button>
                     </div>
 
                     <div>
-                      {cartItems.length ? (
+                      {cartItem?.cartQuantity ? (
                         <button
                           disabled={!stock}
                           onClick={() => handleAddToCart(productInfo)}
