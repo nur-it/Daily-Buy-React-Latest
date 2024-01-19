@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { SecondaryButton } from "../theme/Button";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../redux/feature/cartSlice";
 import { useNavigate } from "react-router-dom";
 import ReactStars from "react-stars";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { addToCart } from "../../redux/feature/cartSlice";
+import { SecondaryButton } from "../theme/Button";
 
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ const ProductCard = ({ product }) => {
             <p>{discount}% OFF</p>
           </div>
 
-          <div onClick={() => handleProductDetails(_id)} className="md:w-[300px] md:h-[300px] mx-auto">
+          <div onClick={() => handleProductDetails(_id)} className="md:w-[300px] h-[120px] md:h-[300px]  mx-auto">
             <img src={main_img_url} className="w-full h-full object-center object-cover" alt="" />
           </div>
           <div onClick={() => handleProductDetails(_id)} className="space-y-3 lg:mt-1">
