@@ -19,9 +19,7 @@ const Footer = () => {
               <img src={logo} className="w-full h-full" alt="" />
             </div>
           </Link>
-          <p className="py-3 text-gray-600">
-          Daily Buy is an online marketplace that provides a wide range of high-quality products at affordable prices.
-          </p>
+          <p className="py-3 text-gray-600">Daily Buy is an online marketplace that provides a wide range of high-quality products at affordable prices.</p>
           <div className="flex items-center space-x-2">
             <img src={social3} className="cursor-pointer" alt="" />
             <img src={social2} className="cursor-pointer" alt="" />
@@ -32,33 +30,58 @@ const Footer = () => {
         <div className="">
           <h2 className="text-2xl font-semibold mt-3 mb-5">QUICK LINKS</h2>
           <ul className="space-y-4 py-3">
-            <li className="txtHover">Home</li>
-            <li className="txtHover">Products</li>
-            <li className="txtHover">Blog</li>
-            <li className="txtHover">About us</li>
-            <li className="txtHover">Contact us</li>
+            <li className="txtHover">
+              <Link to="/home">Home</Link>
+            </li>
+            <li className="txtHover">
+              <Link to="/products">Products</Link>
+            </li>
+            <li className="txtHover">
+              <Link to="/blog">Blog</Link>
+            </li>
+            <li className="txtHover">
+              <Link to="/about">About us</Link>
+            </li>
+            <li className="txtHover">
+              <Link to="/contact">Contact us</Link>
+            </li>
           </ul>
         </div>{" "}
         <div className="">
           <h2 className="text-2xl font-semibold mt-3 mb-5">CUSTOMER AREA</h2>
           <ul className="space-y-4 py-3">
-            <li className="txtHover">My Account</li>
-            <li className="txtHover">Order</li>
-            <li className="txtHover">Terms</li>
-            <li className="txtHover">Privacy Policy</li>
-            <li className="txtHover">Shipping Information</li>
+            <li className="txtHover">
+              {" "}
+              <Link to="/account"> My Account</Link>
+            </li>
+            <li className="txtHover">
+              {" "}
+              <Link to="/order"> Order</Link>
+            </li>
+            <li className="txtHover">
+              {" "}
+              <Link to="/terms"> Terms</Link>
+            </li>
+            <li className="txtHover">
+              {" "}
+              <Link to="/policy"> Privacy Policy</Link>
+            </li>
+            <li className="txtHover">
+              {" "}
+              <Link to="/sipping"> Shipping Information</Link>
+            </li>
           </ul>
         </div>{" "}
         <div className="">
           <h2 className="text-2xl font-semibold mt-3 mb-5">CONTACT</h2>
-          <p className="py-3 text-gray-600">
-          We'd love to hear from you! If you have any questions or concerns, please don't hesitate to contact us. 
-          </p>
+          <p className="py-3 text-gray-600">We'd love to hear from you! If you have any questions or concerns, please don't hesitate to contact us.</p>
           <div className="p-3 flex space-x-3 items-center">
             <img src={contactIcon} alt="" />
             <div>
               <p className="text-black font-medium">Have any question?</p>
-              <p className="text-primary-600 font-bold text-3xl">099 456 789</p>
+              <a href="tel:099 456 789" className="inline-block text-primary-600 font-bold text-3xl">
+                099 456 789
+              </a>
             </div>
           </div>
         </div>

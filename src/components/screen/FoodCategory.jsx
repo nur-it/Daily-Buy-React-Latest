@@ -17,9 +17,7 @@ const FoodCategory = () => {
             <img className="group-hover:scale-110  transition duration-300" src={food1} alt="" />
           </div>
           <div>
-            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">
-              Fruits & Vegetable
-            </h3>
+            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">Fruits & Vegetable</h3>
             <p className="text-gray-500">6 Items</p>
           </div>
         </div>{" "}
@@ -28,9 +26,7 @@ const FoodCategory = () => {
             <img className="group-hover:scale-110  transition duration-300" src={food2} alt="" />
           </div>
           <div>
-            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">
-              Meats & Fish
-            </h3>
+            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">Meats & Fish</h3>
             <p className="text-gray-500">5 Items</p>
           </div>
         </div>{" "}
@@ -39,9 +35,7 @@ const FoodCategory = () => {
             <img className="group-hover:scale-110  transition duration-300" src={food3} alt="" />
           </div>
           <div>
-            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">
-              Breads & Bakery
-            </h3>
+            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">Breads & Bakery</h3>
             <p className="text-gray-500">9 Items</p>
           </div>
         </div>{" "}
@@ -50,9 +44,7 @@ const FoodCategory = () => {
             <img className="group-hover:scale-110  transition duration-300" src={food4} alt="" />
           </div>
           <div>
-            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">
-              Frozen Foods
-            </h3>
+            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">Frozen Foods</h3>
             <p className="text-gray-500">4 Items</p>
           </div>
         </div>{" "}
@@ -61,9 +53,7 @@ const FoodCategory = () => {
             <img className="group-hover:scale-110  transition duration-300" src={food5} alt="" />
           </div>
           <div>
-            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">
-              Breakfast & Dairy
-            </h3>
+            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">Breakfast & Dairy</h3>
             <p className="text-gray-500">21 Items</p>
           </div>
         </div>{" "}
@@ -72,9 +62,7 @@ const FoodCategory = () => {
             <img className="group-hover:scale-110  transition duration-300" src={food6} alt="" />
           </div>
           <div>
-            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">
-              Biscuits & Snacks
-            </h3>
+            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">Biscuits & Snacks</h3>
             <p className="text-gray-500">8 Items</p>
           </div>
         </div>{" "}
@@ -83,9 +71,7 @@ const FoodCategory = () => {
             <img className="group-hover:scale-110  transition duration-300" src={food7} alt="" />
           </div>
           <div>
-            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">
-              Beverages
-            </h3>
+            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">Beverages</h3>
             <p className="text-gray-500">6 Items</p>
           </div>
         </div>{" "}
@@ -94,9 +80,7 @@ const FoodCategory = () => {
             <img className="group-hover:scale-110  transition duration-300" src={food8} alt="" />
           </div>
           <div>
-            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">
-              Grocery
-            </h3>
+            <h3 className="text-2xl font-medium text-black/80 mb-2 group-hover:underline group-hover:text-primary-600 duration-300 transition">Grocery</h3>
             <p className="text-gray-500">16 Items</p>
           </div>
         </div>

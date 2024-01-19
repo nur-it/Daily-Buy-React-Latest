@@ -6,8 +6,8 @@ import { PrimaryButton } from "../theme/Button";
 const PosterOffer = () => {
   return (
     <div className="container mt-8 lg:mt-16">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="group_bg3 py-[52px] bg-gray-200 grid grid-cols-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
+        <div className="group_bg3 py-[52px] bg-gray-200 grid grid-cols-2 items-center h-full">
           <div></div>
           <div>
             <div className="space-y-2 text-black/75">
@@ -22,7 +22,7 @@ const PosterOffer = () => {
           </div>
         </div>
         <div className="group_bg4 py-[52px]">
-          <div className="grid grid-cols-2 align-middle">
+          <div className="grid grid-cols-2 items-center h-full">
             <div></div>
             <div>
               <div className="space-y-2 text-black/75">
@@ -35,9 +35,9 @@ const PosterOffer = () => {
                 </Link>
               </div>
             </div>
-            </div>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
   );
 };

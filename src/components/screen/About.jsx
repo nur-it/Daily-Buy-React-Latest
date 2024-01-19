@@ -17,9 +17,8 @@ const About = () => {
               A wonderful serenity has taken possession of my entire soul, like these sweet mornings
               <br />
               <br />
-              of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss
-              of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my
-              talents.
+              of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend,
+              so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.
             </p>
           </div>
         </div>
@@ -37,9 +36,8 @@ const About = () => {
               A wonderful serenity has taken possession of my entire soul, like these sweet mornings
               <br />
               <br />
-              of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss
-              of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my
-              talents. I should be incapable of drawing a single stroke
+              of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend,
+              so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke
             </p>
             <div className="w-full h-[300px] md:h-[450px]">
               <img className="w-full h-full object-center object-cover rounded-[10px]" src={img_four} alt="" />
@@ -55,9 +53,8 @@ const About = () => {
                 A wonderful serenity has taken possession of my entire soul, like these sweet mornings
                 <br />
                 <br />
-                of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss
-                of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my
-                talents. I should be incapable of drawing a single strok
+                of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear
+                friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single strok
               </p>
             </div>
           </div>

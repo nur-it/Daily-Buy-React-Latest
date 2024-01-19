@@ -19,9 +19,8 @@ const AboutV2 = () => {
               A wonderful serenity has taken possession of my entire soul, like these sweet mornings
               <br className="hidden lg:block" />
               <br className="hidden lg:block" />
-              of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss
-              of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my
-              talents.
+              of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend,
+              so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.
             </p>
           </div>
         </div>
@@ -33,27 +32,21 @@ const AboutV2 = () => {
                 <img src={qualityAndFresh} alt="" />
               </div>
               <h2 className="text-center text-[20px] font-bold mt-[16px] mb-[8px]">Quality & Fresh products</h2>
-              <p className="text-center text-[14px] text-[#E6F6F3]">
-                Morbi ornare augue mauris, vel pretium justo vulputate quis. Morbi lacinia porta mauris et auctor. Suspendisse potenti
-              </p>
+              <p className="text-center text-[14px] text-[#E6F6F3]">Morbi ornare augue mauris, vel pretium justo vulputate quis. Morbi lacinia porta mauris et auctor. Suspendisse potenti</p>
             </div>
             <div className="lg:w-[275px] flex flex-col justify-center items-center">
               <div className="bg-white w-[80px] h-[80px] rounded-full flex items-center justify-center">
                 <img src={organic} alt="" />
               </div>
               <h2 className="text-center text-[20px] font-bold mt-[16px] mb-[8px]">Ecological and organic</h2>
-              <p className="text-center text-[14px] text-[#E6F6F3]">
-                Morbi ornare augue mauris, vel pretium justo vulputate quis. Morbi lacinia porta mauris et auctor. Suspendisse potenti
-              </p>
+              <p className="text-center text-[14px] text-[#E6F6F3]">Morbi ornare augue mauris, vel pretium justo vulputate quis. Morbi lacinia porta mauris et auctor. Suspendisse potenti</p>
             </div>
             <div className="lg:w-[275px] flex flex-col justify-center items-center">
               <div className="bg-white w-[80px] h-[80px] rounded-full flex items-center justify-center">
                 <img src={bestSuppliers} alt="" />
               </div>
               <h2 className="text-center text-[20px] font-bold mt-[16px] mb-[8px]">QThe Best Suppliers</h2>
-              <p className="text-center text-[14px] text-[#E6F6F3]">
-                Morbi ornare augue mauris, vel pretium justo vulputate quis. Morbi lacinia porta mauris et auctor. Suspendisse potenti
-              </p>
+              <p className="text-center text-[14px] text-[#E6F6F3]">Morbi ornare augue mauris, vel pretium justo vulputate quis. Morbi lacinia porta mauris et auctor. Suspendisse potenti</p>
             </div>
           </div>
         </div>

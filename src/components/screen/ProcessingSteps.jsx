@@ -9,19 +9,19 @@ const ProcessingSteps = () => {
     <div className="container mt-16 lg:mt-20 pb-8">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 items-center w-full lg:w-5/6 mx-0 lg:mx-auto">
         <div className="bg-primary-50/30 lg:bg-white rounded p-3 lg:p-0 block lg:flex items-center lg:space-x-3 lg:border-r ">
-          <img src={stepImg1} alt="" />
+          <img src={stepImg1} className="mix-blend-multiply" alt="processImg" />
           <p className="font-medium text-base">Fastest Delivery</p>
         </div>{" "}
         <div className="bg-primary-50/30 lg:bg-white rounded p-3 lg:p-0 block lg:flex items-center lg:space-x-3 lg:border-r ">
-          <img src={stepImg2} alt="" />
+          <img src={stepImg2} className="mix-blend-multiply" alt="processImg" />
           <p className="font-medium text-base">Fresh Grocery</p>
         </div>{" "}
         <div className="bg-primary-50/30 lg:bg-white rounded p-3 lg:p-0 block lg:flex items-center lg:space-x-3 lg:border-r ">
-          <img src={stepImg3} alt="" />
+          <img src={stepImg3} className="mix-blend-multiply" alt="processImg" />
           <p className="font-medium text-base">Easy to payment</p>
         </div>{" "}
         <div className="bg-primary-50/30 lg:bg-white rounded p-3 lg:p-0 block lg:flex items-center lg:space-x-3 ">
-          <img src={stepImg4} alt="" />
+          <img src={stepImg4} className="mix-blend-multiply" alt="processImg" />
           <p className="font-medium text-base">24/7 Support</p>
         </div>
       </div>
