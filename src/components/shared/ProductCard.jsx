@@ -33,7 +33,7 @@ const ProductCard = ({ product }) => {
             <p>{discount}% OFF</p>
           </div>
 
-          <div onClick={() => handleProductDetails(_id)} className="md:w-[300px] h-[120px] sm:h-[300px]  mx-auto">
+          <div onClick={() => handleProductDetails(_id)} className="sm:w-[267px] sm:h-[267px]  mx-auto">
             <img src={main_img_url} className="w-full h-full object-center object-fill" alt="" />
           </div>
           <div onClick={() => handleProductDetails(_id)} className="space-y-3 lg:mt-1">

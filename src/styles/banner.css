@@ -1,5 +1,5 @@
 .slider_bg {
-  background-image: url(https://i.ibb.co/26Rph4H/hero-1.png);
+  background-image: url(../assets/hero/hero1.png);
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,7 +10,7 @@
 }
 
 .group_bg1 {
-  background-image: url(https://i.ibb.co/YdczRp1/hero-2.png);
+  background-image: url(../assets/hero/hero2.png);
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,7 +19,7 @@
   box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px;
 }
 .group_bg2 {
-  background-image: url(https://i.ibb.co/D9Ydsgw/hero-3.png);
+  background-image: url(../assets/hero/hero3.png);
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;

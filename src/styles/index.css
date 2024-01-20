@@ -51,8 +51,6 @@ li {
   }
 }
 
-
-
 input[type="range"] {
   height: 26px;
   -webkit-appearance: none;
@@ -173,18 +171,20 @@ li:hover .category_img_hover {
   color: #fff !important;
   background-color: #00a884 !important;
 }
-
+.swiper-pagination-bullet {
+  height: 11px !important;
+  height: 10px !important;
+  background: #00a884 !important;
+}
 .swiper-pagination-bullet-active {
   width: 20px !important;
   height: 10px !important;
   border-radius: 30px !important;
   background: #00a884 !important;
+  opacity: 1 !important;
 }
 
-
-
 @media only screen and (max-width: 768px) {
-
   .swiper-button-prev,
   .swiper-button-next {
     display: none !important;
