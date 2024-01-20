@@ -18,8 +18,7 @@ const OfferTimerBanner = () => {
             <CountDownTimer hoursMinSecs={hoursMinSecs} />
             <div className="flex justify-center lg:justify-start">
               <Link to="/categories">
-                {" "}
-                <button className="bg-primary-600 hover:bg-primary-700 duration-300 transition hover:shadow-custom hover:scale-105 space-x-2 text-white font-semibold  uppercase ease-in-out flex items-center text-[10px] md:text-[14px] lg:text-[18px] py-[10px] md:py-[18px] lg:py-[20px] px-[20px] md:px-[40px] lg:px-[65px] rounded-[5px] lg:rounded-[10px]">
+                <button className="px-[25px] py-[10px] rounded-[5px] text-[10px] md:text-[12px] lg:text-[18px] capitalize font-medium text-white bg-primary-600 hover:bg-primary-500 transition duration-300 ease-out  inline-flex items-center gap-1">
                   <span>SHOP NOW</span>
                   <FiArrowRight className="text-xl" />
                 </button>

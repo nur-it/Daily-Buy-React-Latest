@@ -50,7 +50,7 @@ const BestSales = () => {
             <div className="mt-12 flex justify-center">
               <button
                 onClick={showMoreItem}
-                className="bg-primary-600 hover:bg-primary-500 duration-300 transition hover:shadow-custom hover:scale-110 text-white font-semibold rounded-md uppercase ease-in-out px-[20px] py-[9px] flex items-center gap-1 text-[14px] md:text-[14px]"
+                className="px-[25px] py-[10px] rounded-[5px] text-[10px] md:text-[12px] lg:text-[18px] capitalize font-medium text-white bg-primary-600 hover:bg-primary-500 transition duration-300 ease-out  inline-flex items-center gap-1"
               >
                 <span>Show More</span>
                 <FiChevronDown className="text-xl" />
@@ -62,7 +62,7 @@ const BestSales = () => {
               <a href="#recommended">
                 <button
                   onClick={showLessItem}
-                  className="bg-primary-600 hover:bg-primary-500 duration-300 transition hover:shadow-custom hover:scale-110 text-white font-semibold rounded-md uppercase ease-in-out px-[20px] py-[9px] flex items-center gap-1 text-[14px] md:text-[14px]"
+                  className="px-[25px] py-[10px] rounded-[5px] text-[10px] md:text-[12px] lg:text-[18px] capitalize font-medium text-white bg-primary-600 hover:bg-primary-500 transition duration-300 ease-out  inline-flex items-center gap-1"
                 >
                   <span>Show Less</span>
                   <BiChevronUp className="text-xl" />
