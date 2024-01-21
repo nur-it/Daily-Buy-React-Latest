@@ -20,7 +20,7 @@ const FeatureProduct = () => {
     fetchData();
   }, []);
   return (
-    <>
+    <section>
       <div className="container">
         <div className="flex justify-between items-center mt-[25px] md:mt-[35px] lg:mt-[50px] mb-[16px] lg:mb-[29px]">
           <h2 className="text-sm md:text-2xl lg:text-4xl font-semibold text-center lg:text-left text-[#2E2E2E]">Featured Product</h2>
@@ -29,7 +29,7 @@ const FeatureProduct = () => {
             <FiArrowRight />
           </Link>
         </div>
-        <div className="container">
+        <div>
           <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[10px] md:gap-[20px]">
             {productData.slice(0, 4).map((product) => (
               <ProductCard product={product} key={product._id} />
@@ -37,7 +37,7 @@ const FeatureProduct = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

@@ -38,7 +38,7 @@ const Footer = () => {
 
   return (
     <div className="border-t border-gray-100 footer">
-      <div className="my-16 container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="my-16 container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div className="space-y-8">
           <div className="max-w-[193px]">
             <Link to="/">
@@ -60,7 +60,7 @@ const Footer = () => {
             <img src={contactIcon} alt="" />
             <div>
               <p className="text-black font-medium">{contactSection.question}</p>
-              <a href={`tel:${contactSection.phoneNumber}`} className="inline-block text-primary-600 font-bold text-3xl">
+              <a href={`tel:${contactSection.phoneNumber}`} className="inline-block text-primary-600 font-bold text-xl sm:text-2xl md:text-3xl">
                 {contactSection.phoneNumber}
               </a>
             </div>
@@ -70,10 +70,10 @@ const Footer = () => {
 
       <hr />
 
-      <div className="flex flex-col lg:flex-row justify-between items-center container py-2">
+      <div className="flex flex-col xl:flex-row justify-between items-center container py-2">
         <p className="text-gray-500">DailyBuy - © 2023 All Rights Reserved</p>
         <div className="flex items-center my-2 lg:my-0">
-          <p className="text-primary-600 hidden lg:block font-semibold">Pay With</p> <img src={payment} alt="" />
+          <p className="text-primary-600 hidden md:block font-semibold">Pay With</p> <img src={payment} alt="" />
         </div>
       </div>
     </div>

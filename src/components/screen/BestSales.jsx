@@ -7,30 +7,35 @@ import { Link } from "react-router-dom";
 
 const BestSales = () => {
   const [productData, setProductData] = useState([]);
-  const [visible, setVisible] = useState(8);
-  const fetchData = () => {
-    axios
-      .get("/products.json")
-      .then((response) => {
-        setProductData(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  const [visibleProducts, setVisibleProducts] = useState(8);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("/products.json");
+      setProductData(response.data);
+    } catch (error) {
+      console.error("Error fetching product data:", error);
+    }
   };
+
   useEffect(() => {
     fetchData();
   }, []);
-  const showMoreItem = () => {
-    setVisible((prevValue) => prevValue + 4);
-  };
-  const showLessItem = () => {
-    setVisible((prevValue) => prevValue - 4);
+
+  const showMoreItems = () => {
+    setVisibleProducts((prevValue) => prevValue + 4);
   };
 
+  const showLessItems = () => {
+    setVisibleProducts((prevValue) => prevValue - 4);
+  };
+
+  const canShowMore = visibleProducts < productData.length;
+  const canShowLess = visibleProducts === productData.length && visibleProducts > 8;
+
   return (
-    <>
-      <div className=" mt-8 lg:mt-16 container">
+    <section className="mt-8 lg:mt-16">
+      <div className="container">
         <div className="flex justify-between items-center mt-[25px] md:mt-[35px] lg:mt-[50px] mb-[16px] lg:mb-[29px]">
           <h2 id="recommended" className="text-sm md:text-2xl lg:text-4xl font-semibold text-center lg:text-left text-[#2E2E2E]">
             Recommended for you
@@ -40,16 +45,16 @@ const BestSales = () => {
             <FiArrowRight />
           </Link>
         </div>
-        <div className="container">
+        <div>
           <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[10px] md:gap-[20px]">
-            {productData.slice(0, visible).map((product, idx) => (
+            {productData.slice(0, visibleProducts).map((product, idx) => (
               <ProductCard product={product} key={idx} />
             ))}
           </div>
-          {visible < 9 && (
+          {canShowMore && (
             <div className="mt-12 flex justify-center">
               <button
-                onClick={showMoreItem}
+                onClick={showMoreItems}
                 className="px-[25px] py-[10px] rounded-[5px] text-[10px] md:text-[12px] lg:text-[18px] capitalize font-medium text-white bg-primary-600 hover:bg-primary-500 transition duration-300 ease-out  inline-flex items-center gap-1"
               >
                 <span>Show More</span>
@@ -57,22 +62,20 @@ const BestSales = () => {
               </button>
             </div>
           )}
-          {visible === productData.length && (
+          {canShowLess && (
             <div className="mt-12 flex justify-center">
-              <a href="#recommended">
-                <button
-                  onClick={showLessItem}
-                  className="px-[25px] py-[10px] rounded-[5px] text-[10px] md:text-[12px] lg:text-[18px] capitalize font-medium text-white bg-primary-600 hover:bg-primary-500 transition duration-300 ease-out  inline-flex items-center gap-1"
-                >
-                  <span>Show Less</span>
-                  <BiChevronUp className="text-xl" />
-                </button>
-              </a>
+              <button
+                onClick={showLessItems}
+                className="px-[25px] py-[10px] rounded-[5px] text-[10px] md:text-[12px] lg:text-[18px] capitalize font-medium text-white bg-primary-600 hover:bg-primary-500 transition duration-300 ease-out  inline-flex items-center gap-1"
+              >
+                <span>Show Less</span>
+                <BiChevronUp className="text-xl" />
+              </button>
             </div>
           )}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
