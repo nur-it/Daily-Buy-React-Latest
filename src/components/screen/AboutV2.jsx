@@ -7,6 +7,18 @@ import bestSuppliers from "../../assets/icon/bestSuppliers.png";
 import bottomBannerImg from "../../assets/about/bottom banner V2.png";
 import bottomMobileBanner from "../../assets/about/bottom banner mobile V2.png";
 
+const FeatureCard = ({ icon, title, description }) => {
+  return (
+    <div className="lg:w-[275px] flex flex-col justify-center items-center">
+      <div className="bg-white w-[80px] h-[80px] rounded-full flex items-center justify-center">
+        <img src={icon} alt="" />
+      </div>
+      <h2 className="text-center text-[20px] font-bold mt-[16px] mb-[8px]">{title}</h2>
+      <p className="text-center text-[14px] text-[#E6F6F3]">{description}</p>
+    </div>
+  );
+};
+
 const AboutV2 = () => {
   return (
     <>
@@ -27,42 +39,34 @@ const AboutV2 = () => {
 
         <div className="bg-primary-500 text-white py-[64px]">
           <div className="container flex flex-col lg:flex-row justify-between items-center gap-8 md:gap-14 lg:gap-0">
-            <div className="lg:w-[275px] flex flex-col justify-center items-center">
-              <div className="bg-white w-[80px] h-[80px] rounded-full flex items-center justify-center">
-                <img src={qualityAndFresh} alt="" />
-              </div>
-              <h2 className="text-center text-[20px] font-bold mt-[16px] mb-[8px]">Quality & Fresh products</h2>
-              <p className="text-center text-[14px] text-[#E6F6F3]">Morbi ornare augue mauris, vel pretium justo vulputate quis. Morbi lacinia porta mauris et auctor. Suspendisse potenti</p>
-            </div>
-            <div className="lg:w-[275px] flex flex-col justify-center items-center">
-              <div className="bg-white w-[80px] h-[80px] rounded-full flex items-center justify-center">
-                <img src={organic} alt="" />
-              </div>
-              <h2 className="text-center text-[20px] font-bold mt-[16px] mb-[8px]">Ecological and organic</h2>
-              <p className="text-center text-[14px] text-[#E6F6F3]">Morbi ornare augue mauris, vel pretium justo vulputate quis. Morbi lacinia porta mauris et auctor. Suspendisse potenti</p>
-            </div>
-            <div className="lg:w-[275px] flex flex-col justify-center items-center">
-              <div className="bg-white w-[80px] h-[80px] rounded-full flex items-center justify-center">
-                <img src={bestSuppliers} alt="" />
-              </div>
-              <h2 className="text-center text-[20px] font-bold mt-[16px] mb-[8px]">QThe Best Suppliers</h2>
-              <p className="text-center text-[14px] text-[#E6F6F3]">Morbi ornare augue mauris, vel pretium justo vulputate quis. Morbi lacinia porta mauris et auctor. Suspendisse potenti</p>
-            </div>
+            <FeatureCard
+              icon={qualityAndFresh}
+              title="Quality & Fresh products"
+              description="Morbi ornare augue mauris, vel pretium justo vulputate quis. Morbi lacinia porta mauris et auctor. Suspendisse potenti"
+            />
+            <FeatureCard
+              icon={organic}
+              title="Ecological and organic"
+              description="Morbi ornare augue mauris, vel pretium justo vulputate quis. Morbi lacinia porta mauris et auctor. Suspendisse potenti"
+            />
+            <FeatureCard
+              icon={bestSuppliers}
+              title="The Best Suppliers"
+              description="Morbi ornare augue mauris, vel pretium justo vulputate quis. Morbi lacinia porta mauris et auctor. Suspendisse potenti"
+            />
           </div>
         </div>
 
         <div className="container">
           <div className="flex items-center justify-center">
-            <div className="hidden md:block">
-              <div className="relative">
-                <div className="w-full h-full bg-white/40 absolute flex items-center justify-center">
-                  <button className="bg-white text-primary-500 font-bold py-[20px] px-[65px] rounded-[10px] group">
-                    <span>@username</span>
-                    <div className="bg-primary-500 w-2/3 group-hover:w-full duration-300 h-[2px]"></div>
-                  </button>
-                </div>
-                <img src={bottomBannerImg} alt="" />
+            <div className="relative">
+              <div className="w-full h-full bg-white/40 absolute flex items-center justify-center">
+                <button className="bg-white text-primary-500 font-bold py-[20px] px-[65px] rounded-[10px] group">
+                  <span>@username</span>
+                  <div className="bg-primary-500 w-2/3 group-hover:w-full duration-300 h-[2px]"></div>
+                </button>
               </div>
+              <img src={bottomBannerImg} alt="" />
             </div>
             <div className="block md:hidden">
               <div className="relative">
