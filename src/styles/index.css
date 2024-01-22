@@ -190,3 +190,9 @@ li:hover .category_img_hover {
     display: none !important;
   }
 }
+
+/* Reviews.css */
+
+.reviews-container::-webkit-scrollbar {
+  width: 0px;
+}
