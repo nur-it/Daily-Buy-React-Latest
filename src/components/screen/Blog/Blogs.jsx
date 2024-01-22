@@ -3,8 +3,6 @@ import useBlogs from "../../../hooks/useBlogs";
 import BlogCard from "./BlogCard";
 
 const Blogs = () => {
-  /* `const [Blogs] = useBlogs();` is using the `useBlogs` custom hook to fetch a list of blogs and
-  assigning the returned value to the `Blogs` variable. */
   const [Blogs] = useBlogs();
 
   return (

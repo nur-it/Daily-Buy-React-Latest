@@ -2,6 +2,7 @@ import React from "react";
 import "../../../styles/SignSignUp.css";
 import { FullWidthButton } from "../../theme/Button";
 import Checkbox from "../../theme/Checkbox";
+
 const SignUp = ({ setPath }) => {
   return (
     <div className="">
@@ -23,11 +24,7 @@ const SignUp = ({ setPath }) => {
             </div>
 
             <div className=" text-center">
-              <input
-                className="px-4 py-3 rounded-lg w-full focus:border-primary-600 outline-none border"
-                type="password"
-                placeholder="Confirm Password"
-              />
+              <input className="px-4 py-3 rounded-lg w-full focus:border-primary-600 outline-none border" type="password" placeholder="Confirm Password" />
             </div>
 
             <div className="flex items-center">

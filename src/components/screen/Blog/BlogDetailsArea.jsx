@@ -6,28 +6,26 @@ import twitter from "../../../assets/icon/social_primary_color_tw.png";
 import useBlogs from "../../../hooks/useBlogs";
 import ThemeSuspense from "../../theme/ThemeSuspense";
 
+const capitalizeFirstLetter = (text) => {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+};
+
 const BlogDetailsArea = ({ blogId }) => {
   const [BLogs] = useBlogs(blogId);
 
-  /* The code `if (!BLogs.length) { return <ThemeSuspense />; }` is checking if the `BLogs` array is
- empty. If the array is empty, it means that the data for the specified `blogId` has not been loaded
- yet. In this case, the component returns a `ThemeSuspense` component, which is typically used to
- show a loading state or placeholder content while waiting for data to load. */
   if (!BLogs.length) {
     return <ThemeSuspense />;
   }
 
-  /* The line `const blogInfo = BLogs.find((blog) => blog._id === parseInt(blogId));` is finding the
-  blog object from the `BLogs` array that has an `_id` property matching the `blogId` passed as a
-  parameter. It uses the `find` method to iterate over the array and return the first element that
-  satisfies the condition. The `parseInt` function is used to convert the `blogId` from a string to
-  an integer, as the `_id` property is typically stored as an integer. The found blog object is then
-  assigned to the `blogInfo` variable. */
   const blogInfo = BLogs.find((blog) => blog._id === parseInt(blogId));
-
-  /* The line `const { blog_title, blog_details, banner_img, date, writer, writer_img } = blogInfo;` is
-  using object destructuring to extract specific properties from the `blogInfo` object. */
   const { blog_title, blog_details, banner_img, date, writer, writer_img } = blogInfo;
+
+  const slices = [
+    { start: 0, end: 475 },
+    { start: 476, end: 1256 },
+    { start: 1257, end: 2000 },
+    { start: 2001, end: 3000 },
+  ];
 
   return (
     <div className="mt-[80px] lg:mt-[20px]">
@@ -66,14 +64,12 @@ const BlogDetailsArea = ({ blogId }) => {
             </div>
           </div>
 
-          <p>{blog_details.slice(0, 475)}</p>
-          <br />
-          <p>{blog_details.slice(476, 1256)}</p>
-          <br />
-          <p>{blog_details.slice(0, 475)}</p>
-          <br />
-          <p>{blog_details.slice(476, 1256)}</p>
-          <br />
+          {slices.map((slice, index) => (
+            <React.Fragment key={index}>
+              <p>{capitalizeFirstLetter(blog_details.slice(slice.start, slice.end))}</p>
+              <br />
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </div>
