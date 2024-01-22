@@ -6,11 +6,8 @@ import ProductCard from "../../shared/ProductCard";
 
 const CategoriesProduct = () => {
   const [productData, setProductData] = useState([]);
+  const [selectedSort, setSelectedSort] = useState("New Arrivals");
 
-  /**
-   * The function `fetchData` uses axios to make a GET request to "products.json" and sets the response
-   * data to `productData`.
-   */
   const fetchData = () => {
     axios
       .get("products.json")
@@ -22,11 +19,55 @@ const CategoriesProduct = () => {
       });
   };
 
-  /* The `useEffect` hook is used to perform side effects in functional components. In this case, it is
-used to fetch data from the "products.json" file when the component mounts. */
   useEffect(() => {
     fetchData();
   }, []);
+
+  const sortOptions = [
+    { label: "New Arrivals", value: "New Arrivals" },
+    { label: "Top Rated", value: "Top Rated" },
+    { label: "New Selling", value: "New Selling" },
+  ];
+
+  const handleSortChange = (event) => {
+    setSelectedSort(event.target.value);
+  };
+
+  const renderProductCards = () => {
+    return (
+      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-[10px] lg:gap-[11px] mt-8">
+        {productData.map((product, idx) => (
+          <ProductCard product={product} key={idx} />
+        ))}
+      </div>
+    );
+  };
+
+  const renderSortDropdown = () => (
+    <div className="flex text-gray-600 text-sm">
+      <p>Sort By :</p>
+      <select name="sort" id="sort" value={selectedSort} onChange={handleSortChange} className="bg-transparent focus:outline-none px-3 font-semibold text-black">
+        {sortOptions.map((option, idx) => (
+          <option key={idx} value={option.value} className="p-3">
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+
+  const renderFilterButton = () => (
+    <div className="grid grid-cols-2 text-[16px] lg:hidden">
+      <button className="flex font-medium items-center gap-1 justify-center py-3 w-full border-r focus:text-primary-600 text-xl">
+        <CiFilter className="focus:text-primary-600 text-2xl" />
+        <span className="">Filter</span>
+      </button>
+      <button className="flex font-medium items-center justify-center gap-1 py-3 w-full focus:text-primary-600 text-xl">
+        <HiOutlineChartBar className="focus:text-primary-600 text-2xl" />
+        <span className="">Sort</span>
+      </button>
+    </div>
+  );
 
   return (
     <>
@@ -41,38 +82,10 @@ used to fetch data from the "products.json" file when the component mounts. */
               <span>out of 356 Products</span>
             </small>
           </p>
-          <div className="flex text-gray-600 text-sm">
-            <p>Sort By :</p>
-            <select name="sort" id="sort" className="bg-transparent focus:outline-none px-3 font-semibold text-black">
-              <option className="p-3" value="New Arrivals">
-                New Arrivals
-              </option>
-              <option className="p-3" value="Top Rated">
-                Top Rated
-              </option>
-              <option className="p-3" value="New Selling">
-                New Selling
-              </option>
-            </select>
-          </div>
+          {renderSortDropdown()}
         </div>
-        {/* button */}
-        <div className=" grid grid-cols-2 text-[16px] lg:hidden">
-          <button className=" flex font-medium items-center gap-1 justify-center py-3 w-full border-r focus:text-primary-600  text-xl">
-            <CiFilter className=" focus:text-primary-600 text-2xl" />
-            <span className="">Filter</span>
-          </button>
-          <button className="flex font-medium items-center justify-center gap-1 py-3 w-full   focus:text-primary-600  text-xl">
-            <HiOutlineChartBar className=" focus:text-primary-600 text-2xl" />
-            <span className="">Sort</span>
-          </button>
-        </div>
-        {/* products */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-[10px] lg:gap-[11px] mt-8">
-          {productData.map((product, idx) => (
-            <ProductCard product={product} key={idx} />
-          ))}
-        </div>
+        {renderFilterButton()}
+        {renderProductCards()}
       </div>
     </>
   );
