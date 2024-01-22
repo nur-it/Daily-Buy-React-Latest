@@ -35,32 +35,16 @@ const Checkout = () => {
                 <h3 className="text-xl mb-5 font-semibold">1. Contact Information</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <input
-                      className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border"
-                      type="text"
-                      placeholder="First Name"
-                    />
+                    <input className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border" type="text" placeholder="First Name" />
                   </div>
                   <div>
-                    <input
-                      className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border"
-                      type="text"
-                      placeholder="Last Name"
-                    />
+                    <input className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border" type="text" placeholder="Last Name" />
                   </div>
                   <div>
-                    <input
-                      className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border"
-                      type="number"
-                      placeholder="Phone"
-                    />
+                    <input className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border" type="number" placeholder="Phone" />
                   </div>
                   <div>
-                    <input
-                      className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border"
-                      type="email"
-                      placeholder="Email"
-                    />
+                    <input className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border" type="email" placeholder="Email" />
                   </div>
                 </div>
               </div>{" "}
@@ -69,19 +53,10 @@ const Checkout = () => {
                 <h3 className="text-xl mb-5 font-semibold">2. Shipping Address</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <textarea
-                      rows={1}
-                      className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border"
-                      type="text"
-                      placeholder="Address"
-                    />
+                    <textarea rows={1} className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border" type="text" placeholder="Address" />
                   </div>
                   <div>
-                    <select
-                      className="px-4 py-3 border-gray-100 text-gray-500 rounded w-full focus:border-primary-600 outline-none border"
-                      name="city"
-                      id="city"
-                    >
+                    <select className="px-4 py-3 border-gray-100 text-gray-500 rounded w-full focus:border-primary-600 outline-none border" name="city" id="city">
                       <option value="City">City</option>
                       <option value="Mumbai">Mumbai</option>
                       <option value="Khulna">Khulna</option>
@@ -89,11 +64,7 @@ const Checkout = () => {
                     </select>
                   </div>
                   <div>
-                    <input
-                      className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border"
-                      type="number"
-                      placeholder="Zip Code"
-                    />
+                    <input className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border" type="number" placeholder="Zip Code" />
                   </div>
                 </div>
               </div>
@@ -113,34 +84,18 @@ const Checkout = () => {
                     </button>
                   </div>
                   <div>
-                    <input
-                      className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border"
-                      type="text"
-                      placeholder="Name On Card"
-                    />
+                    <input className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border" type="text" placeholder="Name On Card" />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <input
-                      className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border"
-                      type="number"
-                      placeholder="Card Number"
-                    />
+                    <input className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border" type="number" placeholder="Card Number" />
                   </div>
                   <div>
-                    <input
-                      className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border"
-                      type="number"
-                      placeholder="CVV"
-                    />
+                    <input className="px-4 py-3 border-gray-100 rounded w-full focus:border-primary-600 outline-none border" type="number" placeholder="CVV" />
                   </div>
                   <div>
-                    <select
-                      className="px-4 py-3 border-gray-100 text-gray-500 rounded w-full focus:border-primary-600 outline-none border"
-                      name="month"
-                      id="month"
-                    >
+                    <select className="px-4 py-3 border-gray-100 text-gray-500 rounded w-full focus:border-primary-600 outline-none border" name="month" id="month">
                       <option value="City">Month</option>
                       <option value="January">January</option>
                       <option value="February">February</option>
@@ -157,11 +112,7 @@ const Checkout = () => {
                     </select>
                   </div>{" "}
                   <div>
-                    <select
-                      className="px-4 py-3 border-gray-100 text-gray-500 rounded w-full focus:border-primary-600 outline-none border"
-                      name="year"
-                      id="year"
-                    >
+                    <select className="px-4 py-3 border-gray-100 text-gray-500 rounded w-full focus:border-primary-600 outline-none border" name="year" id="year">
                       <option value="City">Year</option>
                       <option value="2023">2023</option>
                       <option value="2022">2022</option>
