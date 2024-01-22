@@ -4,8 +4,18 @@ import { useSelector } from "react-redux";
 const InvoiceTable = () => {
   const { cartItems } = useSelector((state) => state.cart);
 
-  const total = cartItems.reduce((total, item) => total + item.price * item.cartQuantity, 0);
-  const shipping = 3;
+  const calculateTotal = () => {
+    const total = cartItems.reduce((total, item) => total + item.price * item.cartQuantity, 0);
+    const shipping = 3;
+    return {
+      total,
+      shipping,
+      grandTotal: total + shipping,
+    };
+  };
+
+  const { total, shipping, grandTotal } = calculateTotal();
+
   return (
     <div className="container my-[64px]">
       <div className="border-t-[1px] border-r-[1px] rounded-t-[10px] rounded-bl-[10px]">
@@ -17,17 +27,15 @@ const InvoiceTable = () => {
           <div className="py-[19px]">Amount</div>
         </div>
         {cartItems.map((order, index) => (
-            <>
-            <div key={index} className="grid grid-cols-3 lg:grid-cols-5 justify-items-center text-[#383838] border-t-[1px] border-l">
-              <div className="py-[19px] hidden lg:block">{index + 1}</div>
-              <div className="py-[19px] p-2">{order.name.slice(0, 25)}....</div>
-              <div className="py-[19px] hidden lg:block">{order.cartQuantity}</div>
-              <div className="py-[19px]">${order.price}</div>
-              <div className="py-[19px]">${order.cartQuantity * order.price}</div>
-            </div>
-            </>
+          <div key={index} className="grid grid-cols-3 lg:grid-cols-5 justify-items-center text-[#383838] border-t-[1px] border-l">
+            <div className="py-[19px] hidden lg:block">{index + 1}</div>
+            <div className="py-[19px] p-2">{order.name.slice(0, 25)}....</div>
+            <div className="py-[19px] hidden lg:block">{order.cartQuantity}</div>
+            <div className="py-[19px]">${order.price}</div>
+            <div className="py-[19px]">${order.cartQuantity * order.price}</div>
+          </div>
         ))}
-        {/*  */}
+        {/* Subtotal */}
         <div className="grid grid-cols-3 lg:grid-cols-5 justify-items-center border-t">
           <div className="py-[19px] hidden lg:block"></div>
           <div className="py-[19px] hidden lg:block"></div>
@@ -39,43 +47,36 @@ const InvoiceTable = () => {
             <p>${total}.00</p>
           </div>
         </div>
-        {/*  */}
-        <div className="grid grid-cols-3 lg:grid-cols-5 justify-items-center">
+        {/* Shipping Cost */}
+        <div className="grid grid-cols-3 lg:grid-cols-5 justify-items-center border-t">
           <div className="py-[19px] hidden lg:block"></div>
           <div className="py-[19px] hidden lg:block"></div>
           <div className="py-[19px]"></div>
           <div className="py-[19px] w-full border-l border-b text-center">
-            <p>Shopping Cost</p>
+            <p>Shipping Cost</p>
           </div>
           <div className="py-[19px] border-b w-full text-center">
             <p>${shipping}.00</p>
           </div>
-        </div>{" "}
-        {/*  */}
-        <div className="grid grid-cols-3 lg:grid-cols-5 justify-items-center">
+        </div>
+        {/* Grand Total */}
+        <div className="grid grid-cols-3 lg:grid-cols-5 justify-items-center border-t">
           <div className="py-[19px] hidden lg:block"></div>
           <div className="py-[19px] hidden lg:block"></div>
           <div className="py-[19px]"></div>
           <div className="py-[19px] w-full border-l border-b text-center">
-            <p>Total Cost</p>
+            <p>Grand Total</p>
           </div>
           <div className="py-[19px] border-b w-full text-center">
-            <p>${total + shipping}.00</p>
+            <p>${grandTotal}.00</p>
           </div>
         </div>
       </div>
       <div className="mt-8 lg:mt-20 text-end">
-        <button onClick={()=>window.print()} className="bg-primary-500 cursor-pointer hover:bg-primary-700 transition duration-300 space-x-2 text-white py-2 px-4 rounded shadow-custom">
+        <button onClick={() => window.print()} className="bg-primary-500 cursor-pointer hover:bg-primary-700 transition duration-300 space-x-2 text-white py-2 px-4 rounded shadow-custom">
           <span>Print invoice</span>{" "}
           <span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-5 h-5 inline-block"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 inline-block">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
