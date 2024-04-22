@@ -8,7 +8,9 @@ const BlogPage = lazy(() => import("../pages/BlogPage"));
 const ContactUs = lazy(() => import("../pages/ContactUs"));
 const Invoice = lazy(() => import("../pages/Invoice"));
 const FAQ = lazy(() => import("../pages/FAQ"));
-const TermsCondition = lazy(() => import("../components/screen/Authentication/TermsCondition"));
+const TermsCondition = lazy(() =>
+  import("../components/screen/Authentication/TermsCondition"),
+);
 const Cart = lazy(() => import("../pages/Cart"));
 const Wishlist = lazy(() => import("../pages/Wishlist"));
 const Checkout = lazy(() => import("../pages/Checkout"));

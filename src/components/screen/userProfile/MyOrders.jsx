@@ -31,11 +31,15 @@ const MyOrders = () => {
           <div className="mt-[22px] flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-400 text-[12px]">From</p>
-              <h3 className=" font-semibold mt-[2px] text-[14px]">Dhaka, Bangladesh</h3>
+              <h3 className=" font-semibold mt-[2px] text-[14px]">
+                Dhaka, Bangladesh
+              </h3>
             </div>
             <div>
               <p className="text-sm text-gray-400 text-[12px]">Destination</p>
-              <h3 className=" font-semibold mt-[2px] text-[14px]">Comilla, Bangladesh</h3>
+              <h3 className=" font-semibold mt-[2px] text-[14px]">
+                Comilla, Bangladesh
+              </h3>
             </div>
           </div>
         </div>

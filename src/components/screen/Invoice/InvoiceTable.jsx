@@ -5,7 +5,10 @@ const InvoiceTable = () => {
   const { cartItems } = useSelector((state) => state.cart);
 
   const calculateTotal = () => {
-    const total = cartItems.reduce((total, item) => total + item.price * item.cartQuantity, 0);
+    const total = cartItems.reduce(
+      (total, item) => total + item.price * item.cartQuantity,
+      0,
+    );
     const shipping = 3;
     return {
       total,
@@ -27,10 +30,15 @@ const InvoiceTable = () => {
           <div className="py-[19px]">Amount</div>
         </div>
         {cartItems.map((order, index) => (
-          <div key={index} className="grid grid-cols-3 lg:grid-cols-5 justify-items-center text-[#383838] border-t-[1px] border-l">
+          <div
+            key={index}
+            className="grid grid-cols-3 lg:grid-cols-5 justify-items-center text-[#383838] border-t-[1px] border-l"
+          >
             <div className="py-[19px] hidden lg:block">{index + 1}</div>
             <div className="py-[19px] p-2">{order.name.slice(0, 25)}....</div>
-            <div className="py-[19px] hidden lg:block">{order.cartQuantity}</div>
+            <div className="py-[19px] hidden lg:block">
+              {order.cartQuantity}
+            </div>
             <div className="py-[19px]">${order.price}</div>
             <div className="py-[19px]">${order.cartQuantity * order.price}</div>
           </div>
@@ -73,10 +81,20 @@ const InvoiceTable = () => {
         </div>
       </div>
       <div className="mt-8 lg:mt-20 text-end">
-        <button onClick={() => window.print()} className="bg-primary-500 cursor-pointer hover:bg-primary-700 transition duration-300 space-x-2 text-white py-2 px-4 rounded shadow-custom">
+        <button
+          onClick={() => window.print()}
+          className="bg-primary-500 cursor-pointer hover:bg-primary-700 transition duration-300 space-x-2 text-white py-2 px-4 rounded shadow-custom"
+        >
           <span>Print invoice</span>{" "}
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 inline-block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-5 h-5 inline-block"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"

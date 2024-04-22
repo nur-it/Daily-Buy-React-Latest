@@ -35,7 +35,11 @@ const OfferTimerBanner = () => {
           {/* Image Section */}
           <div className="order-1 md:order-2">
             <div className="w-full h-full sm:h-[450px] md:h-[500px] xl:h-[700px]">
-              <img className="w-full h-full object-center object-fill md:object-cover" src={imgOffer} alt="" />
+              <img
+                className="w-full h-full object-center object-fill md:object-cover"
+                src={imgOffer}
+                alt=""
+              />
             </div>
           </div>
         </div>

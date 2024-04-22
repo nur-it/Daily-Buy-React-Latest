@@ -1,6 +1,10 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { addToCart, decreaseCart, removeFromCart } from "../../../redux/feature/cartSlice";
+import {
+  addToCart,
+  decreaseCart,
+  removeFromCart,
+} from "../../../redux/feature/cartSlice";
 
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
@@ -21,7 +25,11 @@ const CartItem = ({ item }) => {
       <div className="flex items-center lg:col-span-3">
         <div className="p-2">
           <div className="w-[80px] lg:w-[100px] h-[80px] lg:h-[100px] bg-gray-50  rounded-2xl">
-            <img src={main_img_url} className="w-full h-full object-center object-fill" alt="product-img" />
+            <img
+              src={main_img_url}
+              className="w-full h-full object-center object-fill"
+              alt="product-img"
+            />
           </div>
         </div>
         <div className="hidden lg:block w-2/3">{name}</div>
@@ -30,7 +38,9 @@ const CartItem = ({ item }) => {
       <div className="flex flex-col lg:mx-auto text-[12px] md:text-base">
         <h2 className="lg:hidden">{name.slice(0, 16)}...</h2>
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-1">
-          <p className="text-primary-600 lg:text-gray-600 font-semibold">${price}.00</p>
+          <p className="text-primary-600 lg:text-gray-600 font-semibold">
+            ${price}.00
+          </p>
           <p className="text-gray-600 lg:hidden">
             <del>${del_price}.00</del>
           </p>
@@ -46,7 +56,9 @@ const CartItem = ({ item }) => {
           &minus;
         </button>
 
-        <span className="px-2 lg:px-4 lg:text-base font-medium">{cartQuantity}</span>
+        <span className="px-2 lg:px-4 lg:text-base font-medium">
+          {cartQuantity}
+        </span>
 
         <button
           onClick={() => handleQuantityChange(item, addToCart)}
@@ -57,10 +69,22 @@ const CartItem = ({ item }) => {
         </button>
       </div>
 
-      <h2 className="font-semibold text-primary-600 hidden lg:block mx-auto">${total.toFixed(2)}</h2>
+      <h2 className="font-semibold text-primary-600 hidden lg:block mx-auto">
+        ${total.toFixed(2)}
+      </h2>
 
-      <button onClick={() => handleRemoveItem(item)} className="lg:mx-auto p-2 lg:p-4">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 lg:w-6 h-4 lg:h-6 inline-block text-gray-600">
+      <button
+        onClick={() => handleRemoveItem(item)}
+        className="lg:mx-auto p-2 lg:p-4"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-4 lg:w-6 h-4 lg:h-6 inline-block text-gray-600"
+        >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"

@@ -16,7 +16,13 @@ export const FullWidthButton = ({ title, setNewPassword }) => {
     </button>
   );
 };
-export const SecondaryButton = ({ title, w, handleAddToCart, product, stock }) => {
+export const SecondaryButton = ({
+  title,
+  w,
+  handleAddToCart,
+  product,
+  stock,
+}) => {
   return (
     <button
       disabled={!stock}

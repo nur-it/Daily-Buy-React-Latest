@@ -7,7 +7,11 @@ const ContactUs = () => {
     <div>
       <Helmet>
         <title>DailyBuy - Contact us</title>
-        <meta charSet="utf-8" name="description" content="DailyBuy Contact us Page" />
+        <meta
+          charSet="utf-8"
+          name="description"
+          content="DailyBuy Contact us Page"
+        />
       </Helmet>
       <Contact />
     </div>

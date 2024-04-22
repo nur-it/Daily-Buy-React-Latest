@@ -30,7 +30,10 @@ const Password = () => {
 
   return (
     <div className="container mt-5 flex justify-center">
-      <form onSubmit={handleSubmit} className="border rounded-[10px] p-5 md:px-20 md:py-10 w-full lg:w-1/2">
+      <form
+        onSubmit={handleSubmit}
+        className="border rounded-[10px] p-5 md:px-20 md:py-10 w-full lg:w-1/2"
+      >
         <input
           value={oldPassword}
           onChange={(e) => setOldPassword(e.target.value)}
@@ -58,10 +61,15 @@ const Password = () => {
           id="confirmPassword"
           placeholder="Confirm password"
         />
-        <button type="submit" className="w-full bg-primary-600 hover:bg-primary-500 duration-300 rounded-[5px] py-[16px] text-white mt-[15px]">
+        <button
+          type="submit"
+          className="w-full bg-primary-600 hover:bg-primary-500 duration-300 rounded-[5px] py-[16px] text-white mt-[15px]"
+        >
           Change Password
         </button>
-        {notification && <p className="text-secondary-500 mt-3">{notification}</p>}
+        {notification && (
+          <p className="text-secondary-500 mt-3">{notification}</p>
+        )}
       </form>
     </div>
   );

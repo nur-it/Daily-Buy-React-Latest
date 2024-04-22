@@ -6,7 +6,15 @@ function ActiveLink({ children, to, ...props }) {
   let match = useMatch({ path: resolved.pathname, end: true });
   return (
     <>
-      <Link className={match ? "text-primary-600" : "text-gray-700 hover:text-primary-600 duration-300"} to={to} {...props}>
+      <Link
+        className={
+          match
+            ? "text-primary-600"
+            : "text-gray-700 hover:text-primary-600 duration-300"
+        }
+        to={to}
+        {...props}
+      >
         {children}
       </Link>
     </>

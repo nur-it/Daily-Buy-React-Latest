@@ -10,17 +10,32 @@ const SignIn = ({ setPath }) => {
         <div className="form-container p-6 w-full flex justify-center items-center">
           <div className="form-content w-full">
             <h2 className="text-2xl font-semibold text-center mb-8">Login</h2>
-            <form onSubmit={(e) => e.preventDefault()} action="#" className="space-y-5">
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              action="#"
+              className="space-y-5"
+            >
               <div className="text-center">
-                <input className="px-4 py-3  rounded-lg w-full focus:border-primary-600 outline-none border" type="email" placeholder="Email" />
+                <input
+                  className="px-4 py-3  rounded-lg w-full focus:border-primary-600 outline-none border"
+                  type="email"
+                  placeholder="Email"
+                />
               </div>
 
               <div className=" text-center">
-                <input className="px-4 py-3  rounded-lg w-full focus:border-primary-600 outline-none border" type="password" placeholder="Password" />
+                <input
+                  className="px-4 py-3  rounded-lg w-full focus:border-primary-600 outline-none border"
+                  type="password"
+                  placeholder="Password"
+                />
               </div>
 
               <div className="text-end">
-                <button onClick={() => setPath("forgetPassword")} className="inline-block text-secondary-600 font-semibold cursor-pointer hover:underline">
+                <button
+                  onClick={() => setPath("forgetPassword")}
+                  className="inline-block text-secondary-600 font-semibold cursor-pointer hover:underline"
+                >
                   Forgot password?
                 </button>
               </div>
@@ -30,7 +45,10 @@ const SignIn = ({ setPath }) => {
                 <div className="mt-8">
                   <span>Have on account yet?</span>{" "}
                   <span>
-                    <button onClick={() => setPath("signUp")} className="text-primary-600 font-semibold hover:underline">
+                    <button
+                      onClick={() => setPath("signUp")}
+                      className="text-primary-600 font-semibold hover:underline"
+                    >
                       Create Account
                     </button>
                   </span>

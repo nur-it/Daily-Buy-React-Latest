@@ -7,7 +7,11 @@ const AboutUsV2 = () => {
     <div>
       <Helmet>
         <title>DailyBuy - About</title>
-        <meta charSet="utf-8" name="description" content="DailyBuy About Page" />
+        <meta
+          charSet="utf-8"
+          name="description"
+          content="DailyBuy About Page"
+        />
       </Helmet>
       <AboutV2 />
     </div>

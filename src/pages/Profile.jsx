@@ -10,7 +10,11 @@ const Profile = () => {
     <div className="mb-[25px] mt-[100px] md:mt-[44px]">
       <Helmet>
         <title>DailyBuy - Account</title>
-        <meta charSet="utf-8" name="description" content="DailyBuy Invoice Page" />
+        <meta
+          charSet="utf-8"
+          name="description"
+          content="DailyBuy Invoice Page"
+        />
       </Helmet>
       <div className="flex justify-center mb-[25px] container">
         <button

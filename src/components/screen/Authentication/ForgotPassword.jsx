@@ -18,21 +18,38 @@ const ForgotPassword = ({ setPath, onClose }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 items-center h-[70vh] w-full">
         <div className="bgImg w-[400px] lg:w-[430px] h-[70vh] hidden md:block"></div>
         <div className="form-container p-3 w-full">
-          <h2 className="text-2xl font-semibold text-center mb-10">{newPassword ? "New Password" : "Forgot Password"}</h2>
+          <h2 className="text-2xl font-semibold text-center mb-10">
+            {newPassword ? "New Password" : "Forgot Password"}
+          </h2>
           <form onSubmit={handleFormSubmission} className="space-y-5">
             {!newPassword && (
               <div className="text-center">
-                <input required className="input-field px-4 py-3 rounded-lg w-full focus:border-primary-600 outline-none border" type="email" placeholder="Email" />
+                <input
+                  required
+                  className="input-field px-4 py-3 rounded-lg w-full focus:border-primary-600 outline-none border"
+                  type="email"
+                  placeholder="Email"
+                />
               </div>
             )}
 
             {newPassword && (
               <>
                 <div className="text-center">
-                  <input required className="input-field px-4 py-3 rounded-lg w-full focus:border-primary-600 outline-none border lg:w-5/6" type="password" placeholder="Password" />
+                  <input
+                    required
+                    className="input-field px-4 py-3 rounded-lg w-full focus:border-primary-600 outline-none border lg:w-5/6"
+                    type="password"
+                    placeholder="Password"
+                  />
                 </div>
                 <div className="text-center">
-                  <input required className="input-field px-4 py-3 rounded-lg w-full focus:border-primary-600 outline-none border lg:w-5/6" type="password" placeholder="Confirm Password" />
+                  <input
+                    required
+                    className="input-field px-4 py-3 rounded-lg w-full focus:border-primary-600 outline-none border lg:w-5/6"
+                    type="password"
+                    placeholder="Confirm Password"
+                  />
                 </div>
               </>
             )}
@@ -43,11 +60,17 @@ const ForgotPassword = ({ setPath, onClose }) => {
                   <FullWidthButton title="Reset Password" />
                 </Link>
               ) : (
-                <FullWidthButton onClick={() => setNewPassword(true)} title="Forget Password" />
+                <FullWidthButton
+                  onClick={() => setNewPassword(true)}
+                  title="Forget Password"
+                />
               )}
               <div className="mt-8">
                 <span>Already have an account?</span>
-                <button onClick={() => setPath("signIn")} className="text-primary-600 font-semibold hover:underline">
+                <button
+                  onClick={() => setPath("signIn")}
+                  className="text-primary-600 font-semibold hover:underline"
+                >
                   Login
                 </button>
               </div>

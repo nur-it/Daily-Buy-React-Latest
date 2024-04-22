@@ -9,7 +9,11 @@ const Error = () => {
     <div>
       <Helmet>
         <title>404 - Page Not Found</title>
-        <meta charSet="utf-8" name="description" content="DailyBuy 404 not found Page" />
+        <meta
+          charSet="utf-8"
+          name="description"
+          content="DailyBuy 404 not found Page"
+        />
       </Helmet>
       <div className="min-w-screen min-h-screen bg-blue-100 flex items-center p-5 lg:p-20 overflow-hidden relative">
         <div className="flex-1 min-h-full min-w-full rounded-3xl bg-white shadow-custom  p-10 lg:p-20 text-gray-800 relative md:flex items-center text-center md:text-left">
@@ -18,7 +22,9 @@ const Error = () => {
               <img src={logo} alt="" />
             </div>
             <div className="mb-10 md:mb-20 text-gray-600 font-light">
-              <h1 className="font-black uppercase text-3xl lg:text-5xl text-yellow-500 mb-10">You seem to be lost!</h1>
+              <h1 className="font-black uppercase text-3xl lg:text-5xl text-yellow-500 mb-10">
+                You seem to be lost!
+              </h1>
               <p>The page you're looking for isn't available.</p>
               <p>Try searching again or use the Go Back button below.</p>
             </div>
@@ -34,7 +40,11 @@ const Error = () => {
                       stroke="currentColor"
                       className="w-5 h-5 inline-block -mt-1"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                      />
                     </svg>
                   </span>{" "}
                   <span>Go Back</span>

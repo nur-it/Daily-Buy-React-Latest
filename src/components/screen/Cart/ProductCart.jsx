@@ -8,13 +8,18 @@ import ProcessingSteps from "../ProcessingSteps";
 
 const ProductCart = () => {
   const { cartItems } = useSelector((state) => state.cart);
-  const total = cartItems.reduce((total, item) => total + item.price * item.cartQuantity, 0);
+  const total = cartItems.reduce(
+    (total, item) => total + item.price * item.cartQuantity,
+    0,
+  );
   const shipping = 3;
 
   return (
     <div>
       <div className="container text-center">
-        <h2 className="text-[18px] md:text-[25px] lg:text-[48px] font-semibold mt-[100px] lg:mt-[40px] mb-[15px] lg:mb-[32px]">Your Cart</h2>
+        <h2 className="text-[18px] md:text-[25px] lg:text-[48px] font-semibold mt-[100px] lg:mt-[40px] mb-[15px] lg:mb-[32px]">
+          Your Cart
+        </h2>
 
         {cartItems.length ? (
           <div className="grid grid-cols-1 lg:grid-cols-4 lg:gap-8 mt-4">
@@ -38,20 +43,28 @@ const ProductCart = () => {
               <div className="lg:absolute space-y-5 top-0 left-0 w-full h-auto lg:py-3 lg:px-4 lg:shadow-custom lg:border lg:rounded-lg">
                 <div className="flex justify-between items-center">
                   <p className="text-gray-600 text-[14px]">Subtotal:</p>
-                  <p className="text-gray-700 font-semibold text-[16px]">${total}.00</p>
+                  <p className="text-gray-700 font-semibold text-[16px]">
+                    ${total}.00
+                  </p>
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="text-gray-600 text-[14px]">Tax:</p>
-                  <p className="text-gray-700 font-semibold text-[16px]">$0.00</p>
+                  <p className="text-gray-700 font-semibold text-[16px]">
+                    $0.00
+                  </p>
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="text-gray-600 text-[14px]">Shipping:</p>
-                  <p className="text-gray-700 font-semibold text-[16px]">${shipping}.00</p>
+                  <p className="text-gray-700 font-semibold text-[16px]">
+                    ${shipping}.00
+                  </p>
                 </div>
                 <hr className="" />
                 <div className="flex justify-between items-center">
                   <p className="text-black font-medium text-[14px]">Total:</p>
-                  <p className="text-primary-600 font-bold text-[16px]">${total + shipping}.00</p>
+                  <p className="text-primary-600 font-bold text-[16px]">
+                    ${total + shipping}.00
+                  </p>
                 </div>
                 <Link className="mt-[20px] block" to="/checkout">
                   <FullWidthButton title=" Check out" />
@@ -68,8 +81,13 @@ const ProductCart = () => {
           <div className="flex flex-col items-center gap-8 py-20 mt-[50px] ">
             <img className="w-[200px]" src={emptyCart} alt="" />
             <div className="text-center">
-              <h2 className="text-xl text-gray-500 font-semibold mb-6">Your cart is empty!</h2>
-              <Link className="border border-primary-600 text-primary-600 hover:text-white hover:bg-primary-600 text-xl px-4 py-1 rounded" to="/categories">
+              <h2 className="text-xl text-gray-500 font-semibold mb-6">
+                Your cart is empty!
+              </h2>
+              <Link
+                className="border border-primary-600 text-primary-600 hover:text-white hover:bg-primary-600 text-xl px-4 py-1 rounded"
+                to="/categories"
+              >
                 SHOP NOW
               </Link>
             </div>

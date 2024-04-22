@@ -27,19 +27,35 @@ const OrderItem = () => {
               <td className="px-4 py-3">
                 <div className="flex items-center text-sm">
                   <div className="relative w-8 h-8 mr-3 rounded-full md:block">
-                    <img className="object-cover w-full h-full rounded-full" src={product.image} alt="" loading="lazy" />
-                    <div className="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                    <img
+                      className="object-cover w-full h-full rounded-full"
+                      src={product.image}
+                      alt=""
+                      loading="lazy"
+                    />
+                    <div
+                      className="absolute inset-0 rounded-full shadow-inner"
+                      aria-hidden="true"
+                    ></div>
                   </div>
                   <div>
                     <p className="font-semibold text-black">{product.name}</p>
-                    <p className="text-xs text-gray-600">${product.price.toFixed(2)}</p>
+                    <p className="text-xs text-gray-600">
+                      ${product.price.toFixed(2)}
+                    </p>
                   </div>
                 </div>
               </td>
-              <td className="px-4 py-3 text-ms font-semibold">{product.quantity}</td>
-              <td className="px-4 py-3 text-ms font-semibold">${product.total.toFixed(2)}</td>
+              <td className="px-4 py-3 text-ms font-semibold">
+                {product.quantity}
+              </td>
+              <td className="px-4 py-3 text-ms font-semibold">
+                ${product.total.toFixed(2)}
+              </td>
               <td className="px-4 py-3 text-xs">
-                <button className="px-2 py-1 font-semibold leading-tight text-primary-600 bg-primary-100 rounded-sm">Add Review</button>
+                <button className="px-2 py-1 font-semibold leading-tight text-primary-600 bg-primary-100 rounded-sm">
+                  Add Review
+                </button>
               </td>
             </tr>
           </tbody>

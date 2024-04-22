@@ -14,7 +14,9 @@ const RecentBlog = ({ blogId }) => {
 
   return (
     <div className="container">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mt-[48px] lg:mt-[80px] mb-[48px]">Related posts</h2>
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mt-[48px] lg:mt-[80px] mb-[48px]">
+        Related posts
+      </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 justify-center gap-[28px]">
         {recentBlog.map((blog) => (
           <BlogCard blog={blog} key={blog._id} />

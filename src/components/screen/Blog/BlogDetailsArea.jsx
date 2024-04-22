@@ -18,7 +18,8 @@ const BlogDetailsArea = ({ blogId }) => {
   }
 
   const blogInfo = BLogs.find((blog) => blog._id === parseInt(blogId));
-  const { blog_title, blog_details, banner_img, date, writer, writer_img } = blogInfo;
+  const { blog_title, blog_details, banner_img, date, writer, writer_img } =
+    blogInfo;
 
   const slices = [
     { start: 0, end: 475 },
@@ -38,7 +39,9 @@ const BlogDetailsArea = ({ blogId }) => {
 
       <div className="container max-w-[1000px]">
         <div className="bg-white mt-[-50px] md:mt-[-100px] lg:mt-[-180px] p-[13px] md:p-[20px] lg:p-[64px] rounded-[12px] shadow-[0px_10px_60px_rgba(0,0,0,0.1)]">
-          <h1 className="text-[16px] md:text-[30px] lg:text-[50px] font-bold">{blog_title}</h1>
+          <h1 className="text-[16px] md:text-[30px] lg:text-[50px] font-bold">
+            {blog_title}
+          </h1>
 
           <div className="my-[20px] md:my-[30px] lg:my-[48px] flex items-center justify-between">
             <div className="flex items-center gap-[15px] md:gap-[32px]">
@@ -51,22 +54,38 @@ const BlogDetailsArea = ({ blogId }) => {
             <div className="flex items-center gap-[12px] md:gap-[25px]">
               <a href="#">
                 {" "}
-                <img className="w-[19px] md:w-[30px] lg:w-full" src={linkedIn} alt="" />
+                <img
+                  className="w-[19px] md:w-[30px] lg:w-full"
+                  src={linkedIn}
+                  alt=""
+                />
               </a>
               <a href="#">
                 {" "}
-                <img className="w-[19px] md:w-[30px] lg:w-full" src={twitter} alt="" />
+                <img
+                  className="w-[19px] md:w-[30px] lg:w-full"
+                  src={twitter}
+                  alt=""
+                />
               </a>
               <a href="#">
                 {" "}
-                <img className="w-[19px] md:w-[30px] lg:w-full" src={facebook} alt="" />
+                <img
+                  className="w-[19px] md:w-[30px] lg:w-full"
+                  src={facebook}
+                  alt=""
+                />
               </a>
             </div>
           </div>
 
           {slices.map((slice, index) => (
             <React.Fragment key={index}>
-              <p>{capitalizeFirstLetter(blog_details.slice(slice.start, slice.end))}</p>
+              <p>
+                {capitalizeFirstLetter(
+                  blog_details.slice(slice.start, slice.end),
+                )}
+              </p>
               <br />
             </React.Fragment>
           ))}

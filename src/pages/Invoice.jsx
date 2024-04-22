@@ -8,7 +8,11 @@ const Invoice = () => {
     <>
       <Helmet>
         <title>DailyBuy - Invoice</title>
-        <meta charSet="utf-8" name="description" content="DailyBuy Invoice Page" />
+        <meta
+          charSet="utf-8"
+          name="description"
+          content="DailyBuy Invoice Page"
+        />
       </Helmet>
       <InvoiceBanner />
       <InvoiceTable />

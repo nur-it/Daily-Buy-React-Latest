@@ -46,7 +46,13 @@ const CategoriesProduct = () => {
   const renderSortDropdown = () => (
     <div className="flex text-gray-600 text-sm">
       <p>Sort By :</p>
-      <select name="sort" id="sort" value={selectedSort} onChange={handleSortChange} className="bg-transparent focus:outline-none px-3 font-semibold text-black">
+      <select
+        name="sort"
+        id="sort"
+        value={selectedSort}
+        onChange={handleSortChange}
+        className="bg-transparent focus:outline-none px-3 font-semibold text-black"
+      >
         {sortOptions.map((option, idx) => (
           <option key={idx} value={option.value} className="p-3">
             {option.label}

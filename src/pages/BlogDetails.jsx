@@ -11,7 +11,11 @@ const BlogDetails = () => {
     <>
       <Helmet>
         <title>DailyBuy - Blog Details</title>
-        <meta charSet="utf-8" name="description" content="DailyBuy Blog Details Page" />
+        <meta
+          charSet="utf-8"
+          name="description"
+          content="DailyBuy Blog Details Page"
+        />
       </Helmet>
       <BlogDetailsArea blogId={blogId} />
       <RecentBlog blogId={blogId} />

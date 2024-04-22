@@ -9,11 +9,15 @@ const OrderTrack = () => {
       <div className="flex justify-between">
         <div className="flex flex-col lg:flex-row items-center font-semibold lg:space-x-3 space-y-4 lg:space-y-0">
           <h2 className="text-sm lg:text-lg">Order Status :</h2>
-          <h2 className="text-white text-sm bg-secondary-300 rounded-full px-3 py-1">Order Processing</h2>
+          <h2 className="text-white text-sm bg-secondary-300 rounded-full px-3 py-1">
+            Order Processing
+          </h2>
         </div>
         <div className="flex flex-col lg:flex-row items-center font-semibold lg:space-x-3 space-y-4 lg:space-y-0">
           <h2 className="text-sm lg:text-lg">Payment Status :</h2>
-          <h2 className="text-white text-sm bg-primary-600 rounded-full px-3 py-1">Cash on Delivery</h2>
+          <h2 className="text-white text-sm bg-primary-600 rounded-full px-3 py-1">
+            Cash on Delivery
+          </h2>
         </div>
       </div>
 

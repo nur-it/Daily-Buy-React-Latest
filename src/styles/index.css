@@ -154,7 +154,8 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 
 li:hover .category_img_hover {
-  filter: invert(48%) sepia(26%) saturate(6796%) hue-rotate(139deg) brightness(93%) contrast(101%);
+  filter: invert(48%) sepia(26%) saturate(6796%) hue-rotate(139deg)
+    brightness(93%) contrast(101%);
 }
 
 .swiper-button-prev,

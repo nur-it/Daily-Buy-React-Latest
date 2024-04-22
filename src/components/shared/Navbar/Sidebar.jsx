@@ -20,7 +20,11 @@ const Sidebar = ({ visible, handleCloseSidebar }) => {
   }
 
   return (
-    <div id="container" onClick={handleCloseModal} className="lg:hidden z-50 fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex items-center justify-start">
+    <div
+      id="container"
+      onClick={handleCloseModal}
+      className="lg:hidden z-50 fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex items-center justify-start"
+    >
       <div className="relative w-2/4">
         <div className="bg-white w-full h-screen p-[12px] md:p-6">
           <div className="w-full flex justify-between pt-8 border-b border-gray-200 pb-4">
@@ -31,11 +35,16 @@ const Sidebar = ({ visible, handleCloseSidebar }) => {
               <Link onClick={handleCloseSidebar} to="/wishlist">
                 <button className="relative flex items-center" type="button">
                   <RiHeartLine className="text-[20px] text-black" />
-                  <span className="absolute top-[-10px] left-[18px] text-[14px] font-semibold text-primary-600">{0}</span>
+                  <span className="absolute top-[-10px] left-[18px] text-[14px] font-semibold text-primary-600">
+                    {0}
+                  </span>
                 </button>
               </Link>
             </div>
-            <button className="bg-secondary-500 text-white w-6 md:w-8 h-6 md:h-8 rounded-full text-sm" onClick={handleCloseSidebar}>
+            <button
+              className="bg-secondary-500 text-white w-6 md:w-8 h-6 md:h-8 rounded-full text-sm"
+              onClick={handleCloseSidebar}
+            >
               X
             </button>
           </div>

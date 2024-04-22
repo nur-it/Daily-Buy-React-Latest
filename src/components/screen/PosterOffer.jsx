@@ -23,8 +23,12 @@ const PosterOffer = () => {
           <div></div>
           <div>
             <div className="space-y-2 text-black/75">
-              <h2 className="font-bold text-[20px] md:text-[20px] lg:text-[40px]">{offer.title}</h2>
-              <p className="text-gray-500 text-[10px] md:text-[12px] lg:text-[14px]">{offer.discount}</p>
+              <h2 className="font-bold text-[20px] md:text-[20px] lg:text-[40px]">
+                {offer.title}
+              </h2>
+              <p className="text-gray-500 text-[10px] md:text-[12px] lg:text-[14px]">
+                {offer.discount}
+              </p>
             </div>
             <div className="mt-5">
               <Link to="/categories">

@@ -19,19 +19,22 @@ const slides = [
     bgClass: "slider_bg",
     saleText: "SUMMER SALE UPTO 50%",
     title: "Make your life easy with us",
-    description: "We offer a wide selection of high-quality products at affordable prices.",
+    description:
+      "We offer a wide selection of high-quality products at affordable prices.",
   },
   {
     bgClass: "group_bg1",
     saleText: "SUMMER SALE UPTO 20%",
     title: "Make your life easy with us",
-    description: "We offer a wide selection of high-quality products at affordable prices.",
+    description:
+      "We offer a wide selection of high-quality products at affordable prices.",
   },
   {
     bgClass: "group_bg2",
     saleText: "SUMMER SALE UPTO 35%",
     title: "Make your life easy with us",
-    description: "We offer a wide selection of high-quality products at affordable prices.",
+    description:
+      "We offer a wide selection of high-quality products at affordable prices.",
   },
 ];
 
@@ -52,9 +55,13 @@ const Banner = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className={`pl-10 py-10 lg:pl-28 lg:py-28 flex items-center ${slide.bgClass}`}>
+            <div
+              className={`pl-10 py-10 lg:pl-28 lg:py-28 flex items-center ${slide.bgClass}`}
+            >
               <div>
-                <p className="md:bg-primary-50 md:px-4 md:py-2 rounded text-primary-600 inline-block font-semibold text-[8px] md:text-[12px]">{slide.saleText}</p>
+                <p className="md:bg-primary-50 md:px-4 md:py-2 rounded text-primary-600 inline-block font-semibold text-[8px] md:text-[12px]">
+                  {slide.saleText}
+                </p>
                 <h2 className="mt-[4px] md:mt-[10px] mb-[13px] font-bold text-primary-900 text-[20px] md:text-[25px] lg:text-[32px] leading-[22px] md:leading-[35px] lg:leading-[48px] max-w-[162px] sm:max-w-[200px] lg:max-w-full">
                   {slide.title}
                 </h2>

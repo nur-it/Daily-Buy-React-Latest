@@ -19,21 +19,28 @@ const InvoiceBanner = () => {
         <div className="flex flex-col md:flex-row justify-between p-[14px] md:p-[30px] lg:p-[71px] gap-[26px]">
           {/* Invoice Details */}
           <div className="space-y-4">
-            <h1 className="uppercase font-semibold text-[16px] md:text-[24px] pb-6">Invoice</h1>
+            <h1 className="uppercase font-semibold text-[16px] md:text-[24px] pb-6">
+              Invoice
+            </h1>
             <p>
-              <span className="text-white/70 font-normal">Invoice No:</span> {invoiceDetails.invoiceNo}
+              <span className="text-white/70 font-normal">Invoice No:</span>{" "}
+              {invoiceDetails.invoiceNo}
             </p>
             <p>
-              <span className="text-white/70 font-normal">Issued Date:</span> {invoiceDetails.issuedDate}
+              <span className="text-white/70 font-normal">Issued Date:</span>{" "}
+              {invoiceDetails.issuedDate}
             </p>
             <p>
-              <span className="text-white/70 font-normal">Due Date:</span> {invoiceDetails.dueDate}
+              <span className="text-white/70 font-normal">Due Date:</span>{" "}
+              {invoiceDetails.dueDate}
             </p>
           </div>
 
           {/* Billing Details */}
           <div className="max-w-[200px] space-y-6">
-            <h1 className="uppercase font-semibold text-[16px] md:text-[24px] pb-6">billing to</h1>
+            <h1 className="uppercase font-semibold text-[16px] md:text-[24px] pb-6">
+              billing to
+            </h1>
             <p>{`${billingDetails.name}, ${billingDetails.address}`}</p>
           </div>
         </div>

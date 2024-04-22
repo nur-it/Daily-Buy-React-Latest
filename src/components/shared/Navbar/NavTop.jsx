@@ -15,9 +15,13 @@ const NavTop = () => {
           {/* Center section */}
           <div className="flex items-center gap-1 text-xs">
             <p>
-              Summer sale discount off <span className="text-secondary-600">50%</span>!
+              Summer sale discount off{" "}
+              <span className="text-secondary-600">50%</span>!
             </p>
-            <Link className="hover:text-primary-600 duration-300" to="/categories">
+            <Link
+              className="hover:text-primary-600 duration-300"
+              to="/categories"
+            >
               Shop Now
             </Link>
           </div>

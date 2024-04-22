@@ -16,20 +16,32 @@ const ReviewCard = ({ review }) => {
 
       {/* Rating section */}
       <div className="mt-3">
-        <ReactStars count={5} size={25} value={rating} edit={false}></ReactStars>
+        <ReactStars
+          count={5}
+          size={25}
+          value={rating}
+          edit={false}
+        ></ReactStars>
       </div>
 
       <div className="mt-3">
-        <h2 className="text-xl uppercase font-semibold text-gray-600">{review_title}</h2>
+        <h2 className="text-xl uppercase font-semibold text-gray-600">
+          {review_title}
+        </h2>
         <div>
-          <p className="text-gray-600 text-sm mt-2 hidden lg:block">{comments}</p>
+          <p className="text-gray-600 text-sm mt-2 hidden lg:block">
+            {comments}
+          </p>
 
           {/* Responsive "More" and "Less" section */}
           <div className="block lg:hidden">
             {click && (
               <p>
                 {shortComments}...{" "}
-                <span onClick={() => setClick(false)} className="text-primary-600 font-semibold">
+                <span
+                  onClick={() => setClick(false)}
+                  className="text-primary-600 font-semibold"
+                >
                   More
                 </span>
               </p>
@@ -37,7 +49,10 @@ const ReviewCard = ({ review }) => {
             {!click && (
               <p>
                 {comments}{" "}
-                <span onClick={() => setClick(true)} className="text-primary-600 font-semibold">
+                <span
+                  onClick={() => setClick(true)}
+                  className="text-primary-600 font-semibold"
+                >
                   Less
                 </span>
               </p>

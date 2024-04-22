@@ -13,7 +13,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const contactSection = {
-    description: "We'd love to hear from you! If you have any questions or concerns, please don't hesitate to contact us.",
+    description:
+      "We'd love to hear from you! If you have any questions or concerns, please don't hesitate to contact us.",
     question: "Have any question?",
     phoneNumber: "099 456 789",
   };
@@ -45,7 +46,10 @@ const Footer = () => {
               <img src={logo} alt="logo" />
             </Link>
           </div>
-          <p className="max-w-[354px] text-[#454F5B] leading-[30px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <p className="max-w-[354px] text-[#454F5B] leading-[30px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore.
+          </p>
           <SocialIcons socialIcons={socialIcons} />
         </div>
 
@@ -59,8 +63,13 @@ const Footer = () => {
           <div className="p-3 flex space-x-3 items-center">
             <img src={contactIcon} alt="" />
             <div>
-              <p className="text-black font-medium">{contactSection.question}</p>
-              <a href={`tel:${contactSection.phoneNumber}`} className="inline-block text-primary-600 font-bold text-xl sm:text-2xl md:text-3xl">
+              <p className="text-black font-medium">
+                {contactSection.question}
+              </p>
+              <a
+                href={`tel:${contactSection.phoneNumber}`}
+                className="inline-block text-primary-600 font-bold text-xl sm:text-2xl md:text-3xl"
+              >
                 {contactSection.phoneNumber}
               </a>
             </div>
@@ -73,7 +82,10 @@ const Footer = () => {
       <div className="flex flex-col xl:flex-row justify-between items-center container py-2">
         <p className="text-gray-500">DailyBuy - © 2023 All Rights Reserved</p>
         <div className="flex items-center my-2 lg:my-0">
-          <p className="text-primary-600 hidden md:block font-semibold">Pay With</p> <img src={payment} alt="" />
+          <p className="text-primary-600 hidden md:block font-semibold">
+            Pay With
+          </p>{" "}
+          <img src={payment} alt="" />
         </div>
       </div>
     </div>

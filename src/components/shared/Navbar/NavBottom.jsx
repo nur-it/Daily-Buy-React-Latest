@@ -26,7 +26,11 @@ const NavBottom = () => {
                 stroke="currentColor"
                 className="w-6 h-6 inline-block -mt-1"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
               </svg>
             </span>
             <span>Categories</span>
@@ -35,49 +39,81 @@ const NavBottom = () => {
           <div className="shadow-custom opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white hidden lg:block rounded-b-md absolute top-12 left-0 w-full transition duration-300 delay-100 ease-in-out !z-10">
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600">
               <Link className="flex items-center gap-[8px]" to="/categories">
-                <img className="w-[25px] category_img_hover" src={fruits} alt="" />
+                <img
+                  className="w-[25px] category_img_hover"
+                  src={fruits}
+                  alt=""
+                />
                 <span>Fruits & Vegetable</span>
               </Link>
             </li>
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
               <Link className="flex items-center gap-[8px]" to="/categories">
-                <img className="w-[25px] category_img_hover" src={meats} alt="" />
+                <img
+                  className="w-[25px] category_img_hover"
+                  src={meats}
+                  alt=""
+                />
                 <span>Meats & Fish</span>
               </Link>
             </li>
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
               <Link className="flex items-center gap-[8px]" to="/categories">
-                <img className="w-[25px] category_img_hover" src={breads} alt="" />
+                <img
+                  className="w-[25px] category_img_hover"
+                  src={breads}
+                  alt=""
+                />
                 <span>Breads & Bakery</span>
               </Link>
             </li>
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
               <Link className="flex items-center gap-[8px]" to="/categories">
-                <img className="w-[25px] category_img_hover" src={frozen} alt="" />
+                <img
+                  className="w-[25px] category_img_hover"
+                  src={frozen}
+                  alt=""
+                />
                 <span>Frozen Foods</span>
               </Link>
             </li>
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
               <Link className="flex items-center gap-[8px]" to="/categories">
-                <img className="w-[25px] category_img_hover" src={breakfast} alt="" />
+                <img
+                  className="w-[25px] category_img_hover"
+                  src={breakfast}
+                  alt=""
+                />
                 <span>Breakfast & Dairy</span>
               </Link>
             </li>
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
               <Link className="flex items-center gap-[8px]" to="/categories">
-                <img className="w-[25px] category_img_hover" src={biscuits} alt="" />
+                <img
+                  className="w-[25px] category_img_hover"
+                  src={biscuits}
+                  alt=""
+                />
                 <span>Biscuits & Snacks</span>
               </Link>
             </li>
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
               <Link className="flex items-center gap-[8px]" to="/categories">
-                <img className="w-[25px] category_img_hover" src={beverages} alt="" />
+                <img
+                  className="w-[25px] category_img_hover"
+                  src={beverages}
+                  alt=""
+                />
                 <span>Beverages</span>
               </Link>
             </li>
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
               <Link className="flex items-center gap-[8px]" to="/categories">
-                <img className="w-[25px] category_img_hover" src={grocery} alt="" />
+                <img
+                  className="w-[25px] category_img_hover"
+                  src={grocery}
+                  alt=""
+                />
                 <span>Grocery</span>
               </Link>
             </li>

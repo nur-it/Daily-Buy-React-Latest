@@ -10,7 +10,11 @@ const Categories = () => {
     <div className=" mt-12 lg:mt-0">
       <Helmet>
         <title>DailyBuy - Categories</title>
-        <meta charSet="utf-8" name="description" content="DailyBuy Categories Page" />
+        <meta
+          charSet="utf-8"
+          name="description"
+          content="DailyBuy Categories Page"
+        />
       </Helmet>
       {/* categories main section */}
       <section className="grid grid-cols-4 lg:grid-cols-5 gap-8 container mt-8">

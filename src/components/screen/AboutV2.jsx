@@ -13,7 +13,9 @@ const FeatureCard = ({ icon, title, description }) => {
       <div className="bg-white w-[80px] h-[80px] rounded-full flex items-center justify-center">
         <img src={icon} alt="" />
       </div>
-      <h2 className="text-center text-[20px] font-bold mt-[16px] mb-[8px]">{title}</h2>
+      <h2 className="text-center text-[20px] font-bold mt-[16px] mb-[8px]">
+        {title}
+      </h2>
       <p className="text-center text-[14px] text-[#E6F6F3]">{description}</p>
     </div>
   );
@@ -24,15 +26,25 @@ const AboutV2 = () => {
     <>
       <div className="mt-[100px] lg:mt-[52px] flex flex-col gap-[30px] md:gap-[40px] lg:gap-[80px]">
         <div className="flex flex-col lg:flex-row items-center gap-[48px] container">
-          <img className="w-full lg:w-[550px] xl:w-full rounded-[10px]" src={bannerImg} alt="" />
+          <img
+            className="w-full lg:w-[550px] xl:w-full rounded-[10px]"
+            src={bannerImg}
+            alt=""
+          />
           <div>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl text-[#383838] font-bold">A wonderful serenity has by taken possession</h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl text-[#383838] font-bold">
+              A wonderful serenity has by taken possession
+            </h1>
             <p className="mt-[32px] text-sm lg:text-lg text-[#626463]">
-              A wonderful serenity has taken possession of my entire soul, like these sweet mornings
+              A wonderful serenity has taken possession of my entire soul, like
+              these sweet mornings
               <br className="hidden lg:block" />
               <br className="hidden lg:block" />
-              of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend,
-              so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.
+              of spring which I enjoy with my whole heart. I am alone, and feel
+              the charm of existence in this spot, which was created for the
+              bliss of souls like mine. I am so happy, my dear friend, so
+              absorbed in the exquisite sense of mere tranquil existence, that I
+              neglect my talents.
             </p>
           </div>
         </div>
